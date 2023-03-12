@@ -8,14 +8,16 @@ A plugin, which adds certain shortcuts to _Kanboard_.
 Features
 -------------
 
-- `main features list`
-- `main features list`
+- `v+a` opens the [Big Board](https://github.com/TimoStahl/kanboard_plugin_bigboard)
+- `v+t` opens the _"My tasks"_ for the actual user
+- `a+a` opens the projects analytics in a modal
 
 
 Compatibility
 -------------
 
 - Requires [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.27`
+- Requires [Big Board](https://github.com/TimoStahl/kanboard_plugin_bigboard), if the `v+a` shortcut should be accessible
 
 #### Other Plugins & Action Plugins
 - _No known issues_
