@@ -12,13 +12,14 @@ Features
 - `Home` navigates to the home screen / dashboard
 - `v+a` opens the [Big Board](https://github.com/TimoStahl/kanboard_plugin_bigboard)
 - `v+t` opens the _"My tasks"_ for the actual user
-- `a+a` opens the projects analytics in a modal
+- `a+a+N` opens the projects analytics in a modal - N equals the nth analytics type inside the modal
 
 
 Compatibility
 -------------
 
 - Requires [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software") ≥`1.2.27`
+- _(not 100% sure)_ URL rewrite must be enabled for clean URL `define('ENABLE_URL_REWRITE', true);` inside the `config.php` for most shortcuts to work properly
 - Requires [Big Board](https://github.com/TimoStahl/kanboard_plugin_bigboard), if the `v+a` shortcut should be accessible
 
 #### Other Plugins & Action Plugins
