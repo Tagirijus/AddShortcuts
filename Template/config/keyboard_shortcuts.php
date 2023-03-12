@@ -7,6 +7,8 @@
         <li><?= t('Switch to the project overview') ?> = <strong>v o</strong></li>
         <li><?= t('Switch to the board view') ?> = <strong>v b</strong></li>
         <li><?= t('Switch to the list view') ?> = <strong>v l</strong></li>
+        <li><?= t('Switch to the tasks view') ?> = <strong>v t</strong></li>
+        <li><?= t('Open Big Board') ?> = <strong>v a</strong></li>
     </ul>
     <h3><?= t('Board view') ?></h3>
     <ul>
@@ -29,5 +31,9 @@
         <li><?= t('Reset the search/filter box') ?> = <strong>r</strong></li>
         <li><?= t('Close dialog box') ?> = <strong>ESC</strong></li>
         <li><?= t('Submit a form') ?> = <strong>CTRL+ENTER</strong> <?= t('or') ?> <strong>⌘+ENTER</strong></li>
+    </ul>
+    <h3><?= t('Various') ?></h3>
+    <ul>
+        <li><?= t('Analytics') ?> = <strong>a a</strong></li>
     </ul>
 </div>
