@@ -3,7 +3,7 @@
 namespace Kanboard\Plugin\TagiShortcuts;
 
 use Kanboard\Core\Plugin\Base;
-// use Kanboard\Core\Translator;
+use Kanboard\Core\Translator;
 // use Kanboard\Plugin\TagiShortcuts\AgeHelper;  // Helper Class and Filename should be exact
 // use Kanboard\Helper;  // Add core Helper for using forms etc. inside external templates
 
@@ -11,9 +11,16 @@ class Plugin extends Base
 {
     public function initialize()
     {
+        // Template Override
+        $this->template->setTemplateOverride('config/keyboard_shortcuts', 'TagiShortcuts:config/keyboard_shortcuts');
+
         // JS - Asset Hook
-        //  - Keep filename lowercase
         $this->hook->on('template:layout:js', array('template' => 'plugins/TagiShortcuts/Assets/js/tagi-shortcuts.min.js'));
+    }
+
+    public function onStartup()
+    {
+        Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
     }
 
     public function getPluginName()

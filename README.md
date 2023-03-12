@@ -8,6 +8,7 @@ A plugin, which adds certain shortcuts to _Kanboard_.
 Features
 -------------
 
+- `?` opens updated short cut list
 - `v+a` opens the [Big Board](https://github.com/TimoStahl/kanboard_plugin_bigboard)
 - `v+t` opens the _"My tasks"_ for the actual user
 - `a+a` opens the projects analytics in a modal
@@ -22,6 +23,7 @@ Compatibility
 #### Other Plugins & Action Plugins
 - _No known issues_
 #### Core Files & Templates
+- `01` Template override
 - _No database changes_
 
 
