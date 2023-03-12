@@ -26,6 +26,7 @@
     <h3><?= t('Application') ?></h3>
     <ul>
         <li><?= t('Display list of keyboard shortcuts') ?> = <strong>?</strong></li>
+        <li><?= t('Home') ?> = <strong>Home</strong></li>
         <li><?= t('Open board switcher') ?> = <strong>b</strong></li>
         <li><?= t('Go to the search/filter box') ?> = <strong>f</strong></li>
         <li><?= t('Reset the search/filter box') ?> = <strong>r</strong></li>

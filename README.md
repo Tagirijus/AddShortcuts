@@ -9,6 +9,7 @@ Features
 -------------
 
 - `?` opens updated short cut list
+- `Home` navigates to the home screen / dashboard
 - `v+a` opens the [Big Board](https://github.com/TimoStahl/kanboard_plugin_bigboard)
 - `v+t` opens the _"My tasks"_ for the actual user
 - `a+a` opens the projects analytics in a modal

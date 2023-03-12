@@ -12,6 +12,10 @@ function tagiShortcuts(original) {
 
 		original();
 
+		KB.onKey('Home', function () {
+			window.location = '/';
+		});
+
 		KB.onKey('v+a', function () {
 			window.location = '/bigboard';
 		});
