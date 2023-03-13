@@ -35,6 +35,6 @@
     </ul>
     <h3><?= t('Various') ?></h3>
     <ul>
-        <li><?= t('Analytics') ?> = <strong>a a + 1...8</strong></li>
+        <li><?= t('Analytics') ?> = <strong>a a</strong></li>
     </ul>
 </div>
