@@ -5,6 +5,14 @@
 A plugin, which adds certain shortcuts to _Kanboard_.
 
 
+Screenshots
+-------------
+
+**Example use**
+
+![TagiShortcuts example use](../master/Screenshots/TagiShortcuts_example.gif)
+
+
 Features
 -------------
 
