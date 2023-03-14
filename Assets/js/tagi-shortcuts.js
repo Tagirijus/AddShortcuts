@@ -42,6 +42,14 @@ function tagiShortcuts(original) {
 			}
 		});
 
+		if (KB.exists('#task-view')) {
+		    KB.onKey('t', function () {
+		        if (! KB.modal.isOpen()) {
+		            KB.modal.open(KB.find('#tagiAddSpentTimeMenu').data('addUrl'), 'small', false);
+		        }
+		    });
+		}
+
 	};
 }
 

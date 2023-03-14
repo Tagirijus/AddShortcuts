@@ -8,7 +8,7 @@
         <li><?= t('Switch to the board view') ?> = <strong>v b</strong></li>
         <li><?= t('Switch to the list view') ?> = <strong>v l</strong></li>
         <li><?= t('Switch to the tasks view') ?> = <strong>v t</strong></li>
-        <li><?= t('Open Big Board') ?> = <strong>v a</strong></li>
+        <li><?= t('Open Big Board') ?> = <strong>v a</strong><br><i>(need <a href="https://github.com/BlueTeck/kanboard_plugin_bigboard" target="_blank">BigBoard</a> for this to work)</i></li>
     </ul>
     <h3><?= t('Board view') ?></h3>
     <ul>
@@ -22,6 +22,7 @@
         <li><?= t('New subtask') ?> = <strong>s</strong></li>
         <li><?= t('New comment') ?> = <strong>c</strong></li>
         <li><?= t('New internal link') ?> = <strong>l</strong></li>
+        <li><?= t('Add spent time') ?> = <strong>t</strong><br><i>(need <a href="https://github.com/Tagirijus/kanboard-TagiAddSpentTime" target="_blank">TagiAddSpentTime</a> for this to work)</i></li>
     </ul>
     <h3><?= t('Application') ?></h3>
     <ul>

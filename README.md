@@ -21,6 +21,7 @@ Features
 - `v+a` opens the [Big Board](https://github.com/TimoStahl/kanboard_plugin_bigboard)
 - `v+t` opens the _"My tasks"_ for the actual user
 - `a+a` opens the projects analytics in a modal
+- `t` adds the _add spent time_ modal from [TagiAddSpentTime](https://github.com/Tagirijus/kanboard-TagiAddSpentTime)
 
 
 Compatibility

@@ -5,4 +5,5 @@ return array(
     'Open Big Board' => 'Öffne das Big Board',
     'Various' => 'Sonstiges',
     'Home' => 'Startseite',
+    'Add spent time' => 'Füge getätigte Zeit hinzu'
 );
