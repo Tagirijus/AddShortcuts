@@ -1,10 +1,10 @@
 <?php
 
-namespace Kanboard\Plugin\TagiKPShortcuts;
+namespace Kanboard\Plugin\AddShortcuts;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
-// use Kanboard\Plugin\TagiKPShortcuts\AgeHelper;  // Helper Class and Filename should be exact
+// use Kanboard\Plugin\AddShortcuts\AgeHelper;  // Helper Class and Filename should be exact
 // use Kanboard\Helper;  // Add core Helper for using forms etc. inside external templates
 
 class Plugin extends Base
@@ -12,10 +12,10 @@ class Plugin extends Base
     public function initialize()
     {
         // Template Override
-        $this->template->setTemplateOverride('config/keyboard_shortcuts', 'TagiKPShortcuts:config/keyboard_shortcuts');
+        $this->template->setTemplateOverride('config/keyboard_shortcuts', 'AddShortcuts:config/keyboard_shortcuts');
 
         // JS - Asset Hook
-        $this->hook->on('template:layout:js', array('template' => 'plugins/TagiKPShortcuts/Assets/js/tagi-shortcuts.min.js'));
+        $this->hook->on('template:layout:js', array('template' => 'plugins/AddShortcuts/Assets/js/add-shortcuts.min.js'));
     }
 
     public function onStartup()
@@ -27,7 +27,7 @@ class Plugin extends Base
     {
         // Plugin Name MUST be identical to namespace for Plugin Directory to detect updated versions
         // Do not translate the plugin name here
-        return 'TagiKPShortcuts';
+        return 'AddShortcuts';
     }
 
     public function getPluginDescription()
@@ -56,6 +56,6 @@ class Plugin extends Base
 
     public function getPluginHomepage()
     {
-        return 'https://github.com/Tagirijus/TagiKPShortcuts';
+        return 'https://github.com/Tagirijus/AddShortcuts';
     }
 }

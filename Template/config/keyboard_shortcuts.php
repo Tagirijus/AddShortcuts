@@ -22,7 +22,7 @@
         <li><?= t('New subtask') ?> = <strong>s</strong></li>
         <li><?= t('New comment') ?> = <strong>c</strong></li>
         <li><?= t('New internal link') ?> = <strong>l</strong></li>
-        <li><?= t('Add spent time') ?> = <strong>t</strong><br><i>(need <a href="https://github.com/Tagirijus/kanboard-TagiAddSpentTime" target="_blank">TagiAddSpentTime</a> for this to work)</i></li>
+        <li><?= t('Add spent time') ?> = <strong>t</strong><br><i>(need <a href="https://github.com/Tagirijus/AddSpentTime" target="_blank">AddSpentTime</a> for this to work)</i></li>
     </ul>
     <h3><?= t('Application') ?></h3>
     <ul>

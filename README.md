@@ -1,4 +1,4 @@
-# TagiKPShortcuts
+# AddShortcuts
 
 #### _Plugin for [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software")_
 
@@ -10,7 +10,7 @@ Screenshots
 
 **Example use**
 
-![TagiShortcuts example use](../master/Screenshots/TagiShortcuts_example.gif)
+![TagiShortcuts example use](../master/Screenshots/AddShortcuts_example.gif)
 
 
 Features
@@ -21,7 +21,7 @@ Features
 - `v+a` opens the [Big Board](https://github.com/TimoStahl/kanboard_plugin_bigboard)
 - `v+t` opens the _"My tasks"_ for the actual user
 - `a+a` opens the projects analytics in a modal
-- `t` adds the _add spent time_ modal from [TagiAddSpentTime](https://github.com/Tagirijus/kanboard-TagiAddSpentTime)
+- `t` adds the _add spent time_ modal from [TagiAddSpentTime](https://github.com/Tagirijus/AddSpentTime)
 
 
 Compatibility
@@ -48,7 +48,7 @@ Installation
 ------------
 
 1. Go into Kanboards `plugins/` folder
-2. `git clone https://github.com/Tagirijus/TagiKPShortcuts`
+2. `git clone https://github.com/Tagirijus/AddShortcuts`
 
 
 Translations
