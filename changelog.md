@@ -1,6 +1,14 @@
 # Changelog
 
 
+## v1.7
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- Added feature so that the user can assign up to ten variable shortcut-urls
+
+
 ## v1.6
 
 ### What's Changed
