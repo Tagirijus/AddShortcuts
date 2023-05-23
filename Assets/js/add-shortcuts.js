@@ -17,7 +17,7 @@ function tagiShortcuts(original) {
 		});
 
 		KB.onKey('v+a', function () {
-			window.location = '/bigboard';
+			window.location = '/bigboard?search=status%3Aopen';
 		});
 
 		KB.onKey('v+t', function () {
