@@ -16,6 +16,14 @@ class Plugin extends Base
 
         // JS - Asset Hook
         $this->hook->on('template:layout:js', array('template' => 'plugins/AddShortcuts/Assets/js/add-shortcuts.min.js'));
+
+        // Views - Template Hook
+        $this->template->hook->attach(
+            'template:config:sidebar', 'AddShortcuts:config/addshortcuts_config_sidebar');
+
+        // Extra Page - Routes
+        $this->route->addRoute('/addshortcuts/config', 'AddShortcutsController', 'show', 'AddShortcuts');
+        $this->route->addRoute('/addshortcuts/v', 'AddShortcutsController', 'view', 'AddShortcuts');
     }
 
     public function onStartup()

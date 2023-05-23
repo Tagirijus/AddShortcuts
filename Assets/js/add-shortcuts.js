@@ -50,6 +50,37 @@ function tagiShortcuts(original) {
 		    });
 		}
 
+		KB.onKey('v+1', function () {
+			window.location = '/addshortcuts/v?v=1';
+		});
+		KB.onKey('v+2', function () {
+			window.location = '/addshortcuts/v?v=2';
+		});
+		KB.onKey('v+3', function () {
+			window.location = '/addshortcuts/v?v=3';
+		});
+		KB.onKey('v+4', function () {
+			window.location = '/addshortcuts/v?v=4';
+		});
+		KB.onKey('v+5', function () {
+			window.location = '/addshortcuts/v?v=5';
+		});
+		KB.onKey('v+6', function () {
+			window.location = '/addshortcuts/v?v=6';
+		});
+		KB.onKey('v+7', function () {
+			window.location = '/addshortcuts/v?v=7';
+		});
+		KB.onKey('v+8', function () {
+			window.location = '/addshortcuts/v?v=8';
+		});
+		KB.onKey('v+9', function () {
+			window.location = '/addshortcuts/v?v=9';
+		});
+		KB.onKey('v+0', function () {
+			window.location = '/addshortcuts/v?v=0';
+		});
+
 	};
 }
 
