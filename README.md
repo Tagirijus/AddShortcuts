@@ -22,6 +22,7 @@ Features
 - `v+t` opens the _"My tasks"_ for the actual user
 - `a+a` opens the projects analytics in a modal
 - `t` adds the _add spent time_ modal from [TagiAddSpentTime](https://github.com/Tagirijus/AddSpentTime)
+- `v+N` where _N_ is any number between 0 and 9. You can set up custom links in the config. This way you could e.g. assign `/?controller=SearchController&action=index&search=status%3Aopen` so that the respecting shortcut will lead to the filter searching all open tasks.
 
 
 Compatibility
