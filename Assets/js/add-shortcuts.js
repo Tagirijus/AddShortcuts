@@ -48,6 +48,16 @@ function tagiShortcuts(original) {
 		            KB.modal.open(KB.find('#addSpentTimeMenu').data('addurl'), 'small', false);
 		        }
 		    });
+		    KB.onKey('S', function () {
+		        if (! KB.modal.isOpen()) {
+		            KB.modal.open(KB.find('#subtaskHelperConvert').data('addurl'), 'small', false);
+		        }
+		    });
+		    KB.onKey('g', function () {
+		        if (! KB.modal.isOpen()) {
+		            KB.modal.open(KB.find('#subtaskHelperCombine').data('addurl'), 'small', false);
+		        }
+		    });
 		}
 
 		KB.onKey('v+1', function () {

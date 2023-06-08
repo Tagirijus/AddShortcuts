@@ -24,6 +24,8 @@
         <li><?= t('New comment') ?> = <strong>c</strong></li>
         <li><?= t('New internal link') ?> = <strong>l</strong></li>
         <li><?= t('Add spent time') ?> = <strong>t</strong><br><i>(need <a href="https://github.com/Tagirijus/AddSpentTime" target="_blank">AddSpentTime</a> for this to work)</i></li>
+        <li><?= t('Convert task times to new subtask') ?> = <strong>S</strong><br><i>(need <a href="https://github.com/Tagirijus/SubtaskHelper" target="_blank">SubtaskHelper</a> for this to work)</i></li>
+        <li><?= t('Combine done subtasks to new subtask') ?> = <strong>g</strong><br><i>(need <a href="https://github.com/Tagirijus/SubtaskHelper" target="_blank">SubtaskHelper</a> for this to work)</i></li>
     </ul>
     <h3><?= t('Application') ?></h3>
     <ul>
