@@ -58,6 +58,11 @@ function tagiShortcuts(original) {
 		            KB.modal.open(KB.find('#subtaskHelperCombine').data('addurl'), 'small', false);
 		        }
 		    });
+		    KB.onKey('E', function () {
+		        if (! KB.modal.isOpen()) {
+		            KB.modal.open(KB.find('#subtaskHelperEditSubtask').data('addurl'), 'small', false);
+		        }
+		    });
 		}
 
 		KB.onKey('v+1', function () {
