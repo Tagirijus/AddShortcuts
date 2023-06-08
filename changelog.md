@@ -1,6 +1,14 @@
 # Changelog
 
 
+## v1.8
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- Added shortcuts for [SubtaskHelper](https://github.com/Tagirijus/SubtaskHelper)
+
+
 ## v1.7
 
 ### What's Changed
