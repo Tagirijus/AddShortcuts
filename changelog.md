@@ -1,6 +1,14 @@
 # Changelog
 
 
+## v1.10
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- Added another shortcut for searching tasks, which were done this week: `v+c`
+
+
 ## v1.9
 
 ### What's Changed
