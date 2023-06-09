@@ -95,6 +95,9 @@ function tagiShortcuts(original) {
 		KB.onKey('v+0', function () {
 			window.location = '/addshortcuts/v?v=0';
 		});
+		KB.onKey('v+c', function () {
+			window.location = '/addshortcuts/completedThisWeek';
+		});
 
 	};
 }

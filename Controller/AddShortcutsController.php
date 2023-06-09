@@ -74,4 +74,33 @@ class AddShortcutsController extends \Kanboard\Controller\PluginController
         }
         return $this->response->redirect($url, true);
     }
+
+    /**
+     * Get the date range for this actual week
+     * and use it in the search.
+     */
+    public function viewCompletedThisWeek()
+    {
+        $url = '/?controller=SearchController&action=index&search=completedRange%3A"{RANGE}"';
+        $today = new \DateTime('today');
+
+        // get start of week
+        if ($today->format('N') == 1) {
+            $start = $today;
+        } else {
+            $start = new \DateTime('last monday');
+        }
+
+        // get end of week
+        if ($today->format('N') == 7) {
+            $end = $today;
+        } else {
+            $end = new \DateTime('next sunday');
+        }
+
+        $range = $start->format('Y-m-d') . '..' . $end->format('Y-m-d');
+        $url = str_replace('{RANGE}', $range, $url);
+
+        return $this->response->redirect($url, true);
+    }
 }

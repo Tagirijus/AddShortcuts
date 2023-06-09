@@ -24,6 +24,7 @@ class Plugin extends Base
         // Extra Page - Routes
         $this->route->addRoute('/addshortcuts/config', 'AddShortcutsController', 'show', 'AddShortcuts');
         $this->route->addRoute('/addshortcuts/v', 'AddShortcutsController', 'view', 'AddShortcuts');
+        $this->route->addRoute('/addshortcuts/completedThisWeek', 'AddShortcutsController', 'viewCompletedThisWeek', 'AddShortcuts');
     }
 
     public function onStartup()
