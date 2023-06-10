@@ -99,6 +99,12 @@ function tagiShortcuts(original) {
 			window.location = '/addshortcuts/completedThisWeek';
 		});
 
+		KB.onKey('t', function () {
+        if (! KB.modal.isOpen()) {
+            KB.trigger('task.selector.open');
+        }
+    });
+
 	};
 }
 

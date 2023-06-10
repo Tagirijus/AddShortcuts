@@ -33,6 +33,7 @@
         <li><?= t('Display list of keyboard shortcuts') ?> = <strong>?</strong></li>
         <li><?= t('Home') ?> = <strong>Home</strong></li>
         <li><?= t('Open board switcher') ?> = <strong>b</strong></li>
+        <li><?= t('Open task switcher') ?> = <strong>t</strong><br><i>(need <a href="https://github.com/Tagirijus/TaskSelector" target="_blank">TaskSelector</a> for this to work)</i></li>
         <li><?= t('Go to the search/filter box') ?> = <strong>f</strong></li>
         <li><?= t('Reset the search/filter box') ?> = <strong>r</strong></li>
         <li><?= t('Close dialog box') ?> = <strong>ESC</strong></li>

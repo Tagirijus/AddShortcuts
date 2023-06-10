@@ -12,4 +12,5 @@ return array(
     'Switch to the url set up for this number in the config' => 'Zur URL, die in der Config eingestellt wurde für die Zahl',
     'Convert task times to new subtask' => 'Konvertiere Aufgaben-Zeiten zur neuen Unteraufgabe',
     'Combine done subtasks to new subtask' => 'Kombiniere erledigte Unteraufgaben zur neuen Unteraufgabe',
+    'Open task switcher' => 'Aufgaben-Auswahl öffnen',
 );
