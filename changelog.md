@@ -1,6 +1,14 @@
 # Changelog
 
 
+## v1.11
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- Added `t` as a shortcut for the [TaskSelector](https://github.com/Tagirijus/SubtaskHelper) dropdown
+
+
 ## v1.10
 
 ### What's Changed
