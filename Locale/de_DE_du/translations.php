@@ -14,4 +14,5 @@ return array(
     'Open task switcher' => 'Aufgaben-Auswahl öffnen',
     'Caption' => 'Bezeichnung',
     'Show tasks, which were completed in the actual week (Mo-Su)' => 'Zeige Aufgaben, die in dieser Woche erlidgt wurden (Mo-So)',
+    'Entered data will overwrite chosen shortcut number!' => 'Eingegebene Daten werden gewählte Shortcut-Nummer überschreiben!',
 );

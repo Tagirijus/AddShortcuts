@@ -99,13 +99,70 @@ function tagiShortcuts(original) {
 			window.location = '/addshortcuts/completedThisWeek';
 		});
 
+		KB.onKey('A+1', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open(generateAddShortcutModalLink(1), 'small', false);
+	        }
+    	});
+    	KB.onKey('A+2', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open(generateAddShortcutModalLink(2), 'small', false);
+	        }
+    	});
+    	KB.onKey('A+3', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open(generateAddShortcutModalLink(3), 'small', false);
+	        }
+    	});
+    	KB.onKey('A+4', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open(generateAddShortcutModalLink(4), 'small', false);
+	        }
+    	});
+    	KB.onKey('A+5', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open(generateAddShortcutModalLink(5), 'small', false);
+	        }
+    	});
+    	KB.onKey('A+6', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open(generateAddShortcutModalLink(6), 'small', false);
+	        }
+    	});
+    	KB.onKey('A+7', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open(generateAddShortcutModalLink(7), 'small', false);
+	        }
+    	});
+    	KB.onKey('A+8', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open(generateAddShortcutModalLink(8), 'small', false);
+	        }
+    	});
+    	KB.onKey('A+9', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open(generateAddShortcutModalLink(9), 'small', false);
+	        }
+    	});
+    	KB.onKey('A+0', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open(generateAddShortcutModalLink(0), 'small', false);
+	        }
+    	});
+
 		KB.onKey('B', function () {
-        if (! KB.modal.isOpen()) {
-            KB.trigger('task.selector.open');
-        }
-    });
+	        if (! KB.modal.isOpen()) {
+	            KB.trigger('task.selector.open');
+	        }
+    	});
 
 	};
 }
 
 KB.keyboardShortcuts = tagiShortcuts(KB.keyboardShortcuts);
+
+function generateAddShortcutModalLink(num) {
+	var uri = window.location.pathname + encodeURIComponent(window.location.search);
+	var out = '/addshortcuts/addCustomShortcutModal?v=' + num + '&uri=' + uri;
+	return out;
+}

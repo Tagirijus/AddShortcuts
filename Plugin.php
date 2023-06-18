@@ -28,6 +28,7 @@ class Plugin extends Base
         $this->route->addRoute('/addshortcuts/config', 'AddShortcutsController', 'show', 'AddShortcuts');
         $this->route->addRoute('/addshortcuts/v', 'AddShortcutsController', 'view', 'AddShortcuts');
         $this->route->addRoute('/addshortcuts/completedThisWeek', 'AddShortcutsController', 'viewCompletedThisWeek', 'AddShortcuts');
+        $this->route->addRoute('/addshortcuts/addCustomShortcutModal', 'AddShortcutsController', 'viewAddCustomShortcutModal', 'AddShortcuts');
     }
 
     public function onStartup()

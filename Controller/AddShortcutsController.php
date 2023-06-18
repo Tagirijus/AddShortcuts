@@ -123,4 +123,50 @@ class AddShortcutsController extends \Kanboard\Controller\PluginController
 
         return $this->response->redirect($url, true);
     }
+
+    /**
+     * Show the modal to configure a new custom
+     * shortcut with the actual url in the adressbar.
+     *
+     * @return HTML response
+     */
+    public function viewAddCustomShortcutModal()
+    {
+        $v = $this->request->getStringParam('v', '1');
+        $uri = $this->request->getStringParam('uri', '/');
+        $this->response->html($this->helper->layout->config('AddShortcuts:addshortcuts/add_shortcut_modal', [
+            'v' => $v,
+            'uri' => $uri,
+            'v_caption' => $this->configModel->get('addshortcuts_v_' . $v . '_caption', '---')
+        ]));
+    }
+
+    /**
+     * Sae the modal, the user entered for adding
+     * the actual adre URL as a new shortcut modal,
+     * or overwritting an existing one.
+     */
+    public function saveAddShortcutModal()
+    {
+        $form = $this->request->getValues();
+
+        $v_num = $form['v_num'];
+        $v_url = $form['v_url'];
+        $v_caption = $form['v_caption'];
+
+        $values = [
+            'addshortcuts_v_' . $v_num . '_url' => $v_url,
+            'addshortcuts_v_' . $v_num . '_caption' => $v_caption
+        ];
+
+        $this->languageModel->loadCurrentLanguage();
+
+        if ($this->configModel->save($values)) {
+            $this->flash->success(t('Settings saved successfully.'));
+        } else {
+            $this->flash->failure(t('Unable to save your settings.'));
+        }
+
+        return $this->response->redirect($v_url, true);
+    }
 }
