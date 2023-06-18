@@ -1,6 +1,15 @@
 # Changelog
 
 
+## v1.12
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- Added _captions_ for custom shortcuts
+- Added `A` to quickly add custom shortcuts with the actual adress bar
+
+
 ## v1.11
 
 ### What's Changed
