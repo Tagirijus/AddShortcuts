@@ -13,4 +13,5 @@ return array(
     'Combine done subtasks to new subtask' => 'Kombiniere erledigte Unteraufgaben zur neuen Unteraufgabe',
     'Open task switcher' => 'Aufgaben-Auswahl öffnen',
     'Caption' => 'Bezeichnung',
+    'Show tasks, which were completed in the actual week (Mo-Su)' => 'Zeige Aufgaben, die in dieser Woche erlidgt wurden (Mo-So)',
 );
