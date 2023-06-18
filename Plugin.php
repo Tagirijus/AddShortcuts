@@ -11,6 +11,9 @@ class Plugin extends Base
 {
     public function initialize()
     {
+        // Helper
+        $this->helper->register('addShortcutsHelper', '\Kanboard\Plugin\AddShortcuts\Helper\AddShortcutsHelper');
+
         // Template Override
         $this->template->setTemplateOverride('config/keyboard_shortcuts', 'AddShortcuts:config/keyboard_shortcuts');
 

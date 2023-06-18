@@ -9,7 +9,7 @@
         <li><?= t('Switch to the list view') ?> = <strong>v l</strong></li>
         <li><?= t('Switch to the tasks view') ?> = <strong>v t</strong></li>
         <li><?= t('Open Big Board') ?> = <strong>v a</strong><br><i>(need <a href="https://github.com/BlueTeck/kanboard_plugin_bigboard" target="_blank">BigBoard</a> for this to work)</i></li>
-        <li><?= t('Switch to the url set up for this number in the config') ?> = <strong>v [0-9]</strong></li>
+        <?= $this->addShortcutsHelper->getHelpListV09() ?>
     </ul>
     <h3><?= t('Board view') ?></h3>
     <ul>

@@ -25,7 +25,17 @@ class AddShortcutsController extends \Kanboard\Controller\PluginController
             'v_7_url' => $this->configModel->get('addshortcuts_v_7_url', '/'),
             'v_8_url' => $this->configModel->get('addshortcuts_v_8_url', '/'),
             'v_9_url' => $this->configModel->get('addshortcuts_v_9_url', '/'),
-            'v_0_url' => $this->configModel->get('addshortcuts_v_0_url', '/')
+            'v_0_url' => $this->configModel->get('addshortcuts_v_0_url', '/'),
+            'v_1_caption' => $this->configModel->get('addshortcuts_v_1_caption', '---'),
+            'v_2_caption' => $this->configModel->get('addshortcuts_v_2_caption', '---'),
+            'v_3_caption' => $this->configModel->get('addshortcuts_v_3_caption', '---'),
+            'v_4_caption' => $this->configModel->get('addshortcuts_v_4_caption', '---'),
+            'v_5_caption' => $this->configModel->get('addshortcuts_v_5_caption', '---'),
+            'v_6_caption' => $this->configModel->get('addshortcuts_v_6_caption', '---'),
+            'v_7_caption' => $this->configModel->get('addshortcuts_v_7_caption', '---'),
+            'v_8_caption' => $this->configModel->get('addshortcuts_v_8_caption', '---'),
+            'v_9_caption' => $this->configModel->get('addshortcuts_v_9_caption', '---'),
+            'v_0_caption' => $this->configModel->get('addshortcuts_v_0_caption', '---')
         ]));
     }
 
@@ -46,7 +56,17 @@ class AddShortcutsController extends \Kanboard\Controller\PluginController
             'addshortcuts_v_7_url' => $form['v_7_url'],
             'addshortcuts_v_8_url' => $form['v_8_url'],
             'addshortcuts_v_9_url' => $form['v_9_url'],
-            'addshortcuts_v_0_url' => $form['v_0_url']
+            'addshortcuts_v_0_url' => $form['v_0_url'],
+            'addshortcuts_v_1_caption' => $form['v_1_caption'],
+            'addshortcuts_v_2_caption' => $form['v_2_caption'],
+            'addshortcuts_v_3_caption' => $form['v_3_caption'],
+            'addshortcuts_v_4_caption' => $form['v_4_caption'],
+            'addshortcuts_v_5_caption' => $form['v_5_caption'],
+            'addshortcuts_v_6_caption' => $form['v_6_caption'],
+            'addshortcuts_v_7_caption' => $form['v_7_caption'],
+            'addshortcuts_v_8_caption' => $form['v_8_caption'],
+            'addshortcuts_v_9_caption' => $form['v_9_caption'],
+            'addshortcuts_v_0_caption' => $form['v_0_caption']
         ];
 
         $this->languageModel->loadCurrentLanguage();
