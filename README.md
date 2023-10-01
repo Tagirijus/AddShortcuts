@@ -26,7 +26,8 @@ Features
 - `S` executes the converter feature of the [SubtaskHelper](https://github.com/Tagirijus/SubtaskHelper)
 - `g` executes the combiner feature of the [SubtaskHelper](https://github.com/Tagirijus/SubtaskHelper)
 - `E` executes the edit subtask feature of the [SubtaskHelper](https://github.com/Tagirijus/SubtaskHelper)
-- `v+c` searches for tasks, which were done this week (monday to sunday)
+- `v+c` searches for tasks, which were done last week (monday to sunday)
+- `v+v+c` searches for tasks, which were done this week (monday to sunday)
 - `B` open the task [TaskSelector](https://github.com/Tagirijus/SubtaskHelper) dropdown
 
 

@@ -6,6 +6,15 @@
 ### What's Changed
 
 _(most recent changes are listed on top):_
+- Changed `v+c` to show last week completed tasks.
+- Added `v+v+c` to show this week completed tasks.
+
+
+## v1.12
+
+### What's Changed
+
+_(most recent changes are listed on top):_
 - Added _captions_ for custom shortcuts
 - Added `A` to quickly add custom shortcuts with the actual adress bar
 

@@ -9,7 +9,8 @@
         <li><?= t('Switch to the list view') ?> = <strong>v l</strong></li>
         <li><?= t('Switch to the tasks view') ?> = <strong>v t</strong></li>
         <li><?= t('Open Big Board') ?> = <strong>v a</strong><br><i>(need <a href="https://github.com/BlueTeck/kanboard_plugin_bigboard" target="_blank">BigBoard</a> for this to work)</i></li>
-        <li><?= t('Show tasks, which were completed in the actual week (Mo-Su)') ?> = <strong>v c</strong></li>
+        <li><?= t('Show tasks, which were completed in the last week (Mo-Su)') ?> = <strong>v c</strong></li>
+        <li><?= t('Show tasks, which were completed in the actual week (Mo-Su)') ?> = <strong>v C</strong></li>
         <?= $this->addShortcutsHelper->getHelpListV09() ?>
     </ul>
     <h3><?= t('Board view') ?></h3>
