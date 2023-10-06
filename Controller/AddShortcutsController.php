@@ -26,6 +26,16 @@ class AddShortcutsController extends \Kanboard\Controller\PluginController
             'v_8_url' => $this->configModel->get('addshortcuts_v_8_url', '/'),
             'v_9_url' => $this->configModel->get('addshortcuts_v_9_url', '/'),
             'v_0_url' => $this->configModel->get('addshortcuts_v_0_url', '/'),
+            'v_11_url' => $this->configModel->get('addshortcuts_v_11_url', '/'),
+            'v_12_url' => $this->configModel->get('addshortcuts_v_12_url', '/'),
+            'v_13_url' => $this->configModel->get('addshortcuts_v_13_url', '/'),
+            'v_14_url' => $this->configModel->get('addshortcuts_v_14_url', '/'),
+            'v_15_url' => $this->configModel->get('addshortcuts_v_15_url', '/'),
+            'v_16_url' => $this->configModel->get('addshortcuts_v_16_url', '/'),
+            'v_17_url' => $this->configModel->get('addshortcuts_v_17_url', '/'),
+            'v_18_url' => $this->configModel->get('addshortcuts_v_18_url', '/'),
+            'v_19_url' => $this->configModel->get('addshortcuts_v_19_url', '/'),
+            'v_20_url' => $this->configModel->get('addshortcuts_v_20_url', '/'),
             'v_1_caption' => $this->configModel->get('addshortcuts_v_1_caption', '---'),
             'v_2_caption' => $this->configModel->get('addshortcuts_v_2_caption', '---'),
             'v_3_caption' => $this->configModel->get('addshortcuts_v_3_caption', '---'),
@@ -35,7 +45,17 @@ class AddShortcutsController extends \Kanboard\Controller\PluginController
             'v_7_caption' => $this->configModel->get('addshortcuts_v_7_caption', '---'),
             'v_8_caption' => $this->configModel->get('addshortcuts_v_8_caption', '---'),
             'v_9_caption' => $this->configModel->get('addshortcuts_v_9_caption', '---'),
-            'v_0_caption' => $this->configModel->get('addshortcuts_v_0_caption', '---')
+            'v_0_caption' => $this->configModel->get('addshortcuts_v_0_caption', '---'),
+            'v_11_caption' => $this->configModel->get('addshortcuts_v_11_caption', '---'),
+            'v_12_caption' => $this->configModel->get('addshortcuts_v_12_caption', '---'),
+            'v_13_caption' => $this->configModel->get('addshortcuts_v_13_caption', '---'),
+            'v_14_caption' => $this->configModel->get('addshortcuts_v_14_caption', '---'),
+            'v_15_caption' => $this->configModel->get('addshortcuts_v_15_caption', '---'),
+            'v_16_caption' => $this->configModel->get('addshortcuts_v_16_caption', '---'),
+            'v_17_caption' => $this->configModel->get('addshortcuts_v_17_caption', '---'),
+            'v_18_caption' => $this->configModel->get('addshortcuts_v_18_caption', '---'),
+            'v_19_caption' => $this->configModel->get('addshortcuts_v_19_caption', '---'),
+            'v_20_caption' => $this->configModel->get('addshortcuts_v_20_caption', '---')
         ]));
     }
 
@@ -57,6 +77,16 @@ class AddShortcutsController extends \Kanboard\Controller\PluginController
             'addshortcuts_v_8_url' => $form['v_8_url'],
             'addshortcuts_v_9_url' => $form['v_9_url'],
             'addshortcuts_v_0_url' => $form['v_0_url'],
+            'addshortcuts_v_11_url' => $form['v_11_url'],
+            'addshortcuts_v_12_url' => $form['v_12_url'],
+            'addshortcuts_v_13_url' => $form['v_13_url'],
+            'addshortcuts_v_14_url' => $form['v_14_url'],
+            'addshortcuts_v_15_url' => $form['v_15_url'],
+            'addshortcuts_v_16_url' => $form['v_16_url'],
+            'addshortcuts_v_17_url' => $form['v_17_url'],
+            'addshortcuts_v_18_url' => $form['v_18_url'],
+            'addshortcuts_v_19_url' => $form['v_19_url'],
+            'addshortcuts_v_20_url' => $form['v_20_url'],
             'addshortcuts_v_1_caption' => $form['v_1_caption'],
             'addshortcuts_v_2_caption' => $form['v_2_caption'],
             'addshortcuts_v_3_caption' => $form['v_3_caption'],
@@ -66,7 +96,17 @@ class AddShortcutsController extends \Kanboard\Controller\PluginController
             'addshortcuts_v_7_caption' => $form['v_7_caption'],
             'addshortcuts_v_8_caption' => $form['v_8_caption'],
             'addshortcuts_v_9_caption' => $form['v_9_caption'],
-            'addshortcuts_v_0_caption' => $form['v_0_caption']
+            'addshortcuts_v_0_caption' => $form['v_0_caption'],
+            'addshortcuts_v_11_caption' => $form['v_11_caption'],
+            'addshortcuts_v_12_caption' => $form['v_12_caption'],
+            'addshortcuts_v_13_caption' => $form['v_13_caption'],
+            'addshortcuts_v_14_caption' => $form['v_14_caption'],
+            'addshortcuts_v_15_caption' => $form['v_15_caption'],
+            'addshortcuts_v_16_caption' => $form['v_16_caption'],
+            'addshortcuts_v_17_caption' => $form['v_17_caption'],
+            'addshortcuts_v_18_caption' => $form['v_18_caption'],
+            'addshortcuts_v_19_caption' => $form['v_19_caption'],
+            'addshortcuts_v_20_caption' => $form['v_20_caption']
         ];
 
         $this->languageModel->loadCurrentLanguage();
@@ -85,7 +125,10 @@ class AddShortcutsController extends \Kanboard\Controller\PluginController
      */
     public function view()
     {
-        $allowed = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+        $allowed = [
+            '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
+            '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'
+        ];
         $param = $this->request->getStringParam('v', '1');
         if (in_array($param, $allowed)) {
             $url = $this->configModel->get('addshortcuts_v_' . $param . '_url', '/');

@@ -95,6 +95,36 @@ function tagiShortcuts(original) {
 		KB.onKey('v+0', function () {
 			window.location = '/addshortcuts/v?v=0';
 		});
+		KB.onKey('v+v+1', function () {
+			window.location = '/addshortcuts/v?v=11';
+		});
+		KB.onKey('v+v+2', function () {
+			window.location = '/addshortcuts/v?v=12';
+		});
+		KB.onKey('v+v+3', function () {
+			window.location = '/addshortcuts/v?v=13';
+		});
+		KB.onKey('v+v+4', function () {
+			window.location = '/addshortcuts/v?v=14';
+		});
+		KB.onKey('v+v+5', function () {
+			window.location = '/addshortcuts/v?v=15';
+		});
+		KB.onKey('v+v+6', function () {
+			window.location = '/addshortcuts/v?v=16';
+		});
+		KB.onKey('v+v+7', function () {
+			window.location = '/addshortcuts/v?v=17';
+		});
+		KB.onKey('v+v+8', function () {
+			window.location = '/addshortcuts/v?v=18';
+		});
+		KB.onKey('v+v+9', function () {
+			window.location = '/addshortcuts/v?v=19';
+		});
+		KB.onKey('v+v+0', function () {
+			window.location = '/addshortcuts/v?v=20';
+		});
 		KB.onKey('v+c', function () {
 			window.location = '/addshortcuts/completedLastWeek';
 		});
@@ -150,6 +180,56 @@ function tagiShortcuts(original) {
     	KB.onKey('A+0', function () {
 	        if (! KB.modal.isOpen()) {
 	            KB.modal.open(generateAddShortcutModalLink(0), 'small', false);
+	        }
+    	});
+    	KB.onKey('A+A+1', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open(generateAddShortcutModalLink(11), 'small', false);
+	        }
+    	});
+    	KB.onKey('A+A+2', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open(generateAddShortcutModalLink(12), 'small', false);
+	        }
+    	});
+    	KB.onKey('A+A+3', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open(generateAddShortcutModalLink(13), 'small', false);
+	        }
+    	});
+    	KB.onKey('A+A+4', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open(generateAddShortcutModalLink(14), 'small', false);
+	        }
+    	});
+    	KB.onKey('A+A+5', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open(generateAddShortcutModalLink(15), 'small', false);
+	        }
+    	});
+    	KB.onKey('A+A+6', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open(generateAddShortcutModalLink(16), 'small', false);
+	        }
+    	});
+    	KB.onKey('A+A+7', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open(generateAddShortcutModalLink(17), 'small', false);
+	        }
+    	});
+    	KB.onKey('A+A+8', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open(generateAddShortcutModalLink(18), 'small', false);
+	        }
+    	});
+    	KB.onKey('A+A+9', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open(generateAddShortcutModalLink(19), 'small', false);
+	        }
+    	});
+    	KB.onKey('A+A+0', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open(generateAddShortcutModalLink(20), 'small', false);
 	        }
     	});
 

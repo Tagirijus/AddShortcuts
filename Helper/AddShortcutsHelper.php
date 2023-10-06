@@ -16,7 +16,7 @@ class AddShortcutsHelper extends Base
      * Generae the help list for the help modal
      * for the shortcuts.
      *
-     * For the specific v + [0-9] shortcuts and
+     * For the specific v [+v] + [0-9] shortcuts and
      * their set up captions.
      *
      * @return string
@@ -43,6 +43,43 @@ class AddShortcutsHelper extends Base
             if ($cap !== '---') {
                 $no_caption = false;
                 $list .= '<li><strong>v ' . (string) ($num+1) . '</strong>: ' . $cap . '</li>';
+            }
+        }
+
+        return $no_caption ? '' : $list;
+    }
+
+    /**
+     * Generae the help list for the help modal
+     * for the shortcuts.
+     *
+     * For the specific v + v + [0-9] shortcuts and
+     * their set up captions.
+     *
+     * @return string
+     */
+    public function getHelpListVV09()
+    {
+        $caps = [
+            $this->configModel->get('addshortcuts_v_11_caption', '---'),
+            $this->configModel->get('addshortcuts_v_12_caption', '---'),
+            $this->configModel->get('addshortcuts_v_13_caption', '---'),
+            $this->configModel->get('addshortcuts_v_14_caption', '---'),
+            $this->configModel->get('addshortcuts_v_15_caption', '---'),
+            $this->configModel->get('addshortcuts_v_16_caption', '---'),
+            $this->configModel->get('addshortcuts_v_17_caption', '---'),
+            $this->configModel->get('addshortcuts_v_18_caption', '---'),
+            $this->configModel->get('addshortcuts_v_19_caption', '---'),
+            $this->configModel->get('addshortcuts_v_20_caption', '---')
+        ];
+
+        $list = '';
+        $no_caption = true;
+
+        foreach ($caps as $num => $cap) {
+            if ($cap !== '---') {
+                $no_caption = false;
+                $list .= '<li><strong>v v ' . (string) ($num+1) . '</strong>: ' . $cap . '</li>';
             }
         }
 
