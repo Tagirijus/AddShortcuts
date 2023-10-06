@@ -1,7 +1,15 @@
 # Changelog
 
 
-## v1.12
+## v1.14
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- Added `v+v+N` with additional 10 slots to configure
+
+
+## v1.13
 
 ### What's Changed
 
