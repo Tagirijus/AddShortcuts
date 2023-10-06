@@ -12,7 +12,7 @@ return array(
     'Convert task times to new subtask' => 'Konvertiere Aufgaben-Zeiten zur neuen Unteraufgabe',
     'Combine done subtasks to new subtask' => 'Kombiniere erledigte Unteraufgaben zur neuen Unteraufgabe',
     'Open task switcher' => 'Aufgaben-Auswahl öffnen',
-    'Caption' => 'Bezeichnung',
+    'Caption for' => 'Bezeichnung für',
     'Show tasks, which were completed in the actual week (Mo-Su)' => 'Zeige Aufgaben, die in dieser Woche erlidgt wurden (Mo-So)',
     'Show tasks, which were completed in the last week (Mo-Su)' => 'Zeige Aufgaben, die in der letzten Woche erlidgt wurden (Mo-So)',
     'Entered data will overwrite chosen shortcut number!' => 'Eingegebene Daten werden gewählte Shortcut-Nummer überschreiben!',

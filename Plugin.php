@@ -17,6 +17,9 @@ class Plugin extends Base
         // Template Override
         $this->template->setTemplateOverride('config/keyboard_shortcuts', 'AddShortcuts:config/keyboard_shortcuts');
 
+        // CSS - Asset Hook
+        $this->hook->on('template:layout:css', array('template' => 'plugins/AddShortcuts/Assets/css/add-shortcuts.min.css'));
+
         // JS - Asset Hook
         $this->hook->on('template:layout:js', array('template' => 'plugins/AddShortcuts/Assets/js/add-shortcuts.min.js'));
 
