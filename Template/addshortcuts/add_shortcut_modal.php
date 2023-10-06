@@ -19,12 +19,12 @@
         >
 
         <div class="task-form-main-column">
-            <?= $this->form->label('v + ' . $v, 'v_url') ?>
-            <?= $this->form->text('v_url', ['v_url' => $uri], [], [
-                'autofocus'
-            ]) ?>
             <?= $this->form->label(t('Caption'), 'v_caption') ?>
             <?= $this->form->text('v_caption', ['v_caption' => $v_caption], [], [
+                'autofocus'
+            ]) ?>
+            <?= $this->form->label('v + ' . $v, 'v_url') ?>
+            <?= $this->form->text('v_url', ['v_url' => $uri], [], [
                 'autofocus'
             ]) ?>
         </div>
