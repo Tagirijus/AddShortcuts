@@ -11,6 +11,7 @@
         <li><?= t('Open Big Board') ?> = <strong>v a</strong><br><i>(need <a href="https://github.com/BlueTeck/kanboard_plugin_bigboard" target="_blank">BigBoard</a> for this to work)</i></li>
         <li><?= t('Show tasks, which were completed in the last week (Mo-Su)') ?> = <strong>v c</strong></li>
         <li><?= t('Show tasks, which were completed in the actual week (Mo-Su)') ?> = <strong>v v c</strong></li>
+        <li><?= t('Saves the actual url as a shortcut') ?> = <strong>A [0-9]</strong></li>
         <?= $this->addShortcutsHelper->getHelpListV09() ?>
     </ul>
     <h3><?= t('Board view') ?></h3>

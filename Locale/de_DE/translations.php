@@ -16,4 +16,5 @@ return array(
     'Show tasks, which were completed in the actual week (Mo-Su)' => 'Zeige Aufgaben, die in dieser Woche erlidgt wurden (Mo-So)',
     'Show tasks, which were completed in the last week (Mo-Su)' => 'Zeige Aufgaben, die in der letzten Woche erlidgt wurden (Mo-So)',
     'Entered data will overwrite chosen shortcut number!' => 'Eingegebene Daten werden gewählte Shortcut-Nummer überschreiben!',
+    'Saves the actual url as a shortcut' => 'Speichere die momentane URL als neues Shortcut',
 );
