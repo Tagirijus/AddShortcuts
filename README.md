@@ -4,6 +4,8 @@
 
 A plugin, which adds certain shortcuts to _Kanboard_. Also since version 2 there is a new drop down box feature, with which you can choose predefined user presets to quickly switch to a predefined url.
 
+**Update notice**: since version 2 I refactured the shortcut preset system. I was too lazy to code a converter from the old system to the new one, but the old presets are still there in the database. You might want to look into the `settings` table of the Kanboard database and search the `add_shortcuts_v_*_url` entries to get your old url presets, where the star stands for the number (1 == "v 1" shortcut, 11 = "v v 1", etc.).
+
 
 Screenshots
 -------------
