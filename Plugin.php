@@ -21,7 +21,7 @@ class Plugin extends Base
         $this->hook->on('template:layout:css', array('template' => 'plugins/AddShortcuts/Assets/css/add-shortcuts.min.css'));
 
         // JS - Dynamic Asset Hook
-        $this->template->hook->attach('template:layout:head', 'AddShortcuts:addshortcuts_js');
+        $this->template->hook->attach('template:layout:head', 'AddShortcuts:addshortcuts/addshortcuts_js');
 
         // Views - Template Hook
         $this->template->hook->attach(
@@ -33,6 +33,8 @@ class Plugin extends Base
         $this->route->addRoute('/addshortcuts/completedLastWeek', 'AddShortcutsController', 'viewCompletedLastWeek', 'AddShortcuts');
         $this->route->addRoute('/addshortcuts/addCustomShortcutModal', 'AddShortcutsController', 'viewAddCustomShortcutModal', 'AddShortcuts');
         $this->route->addRoute('/addshortcuts/js', 'AddShortcutsController', 'createJS', 'AddShortcuts');
+        $this->route->addRoute('/addshortcuts/shortcutPresetSelectModal', 'AddShortcutsController', 'viewShortcutPresetSelectModal', 'AddShortcuts');
+        $this->route->addRoute('/addshortcuts/redirectToPreset', 'AddShortcutsController', 'redirectToPreset', 'AddShortcuts');
     }
 
     public function onStartup()

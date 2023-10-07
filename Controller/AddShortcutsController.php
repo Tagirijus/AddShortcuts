@@ -177,4 +177,42 @@ class AddShortcutsController extends \Kanboard\Controller\PluginController
         $this->response->withCache(-1);
         return $this->response->send();
     }
+
+    /**
+     * View the modal which contains the shortcut
+     * preset selector.
+     *
+     * @return HTML response
+     */
+    public function viewShortcutPresetSelectModal()
+    {
+        $presets = $this->helper->addShortcutsHelper->getShortcutPresetsAsArray();
+        $options = [];
+        foreach ($presets as $k => $preset) {
+            $key = $preset['key'] !== '' ? ' (' . $preset['key_help'] . ')' : '';
+            $tmp_title = $preset['label'] . $key;
+            $options[$k] = $tmp_title;
+        }
+        $this->response->html($this->helper->layout->config('AddShortcuts:addshortcuts/preset_selector_modal', [
+            'presets' => $options
+        ]));
+    }
+
+    /**
+     * Redirect to the URL of the preset with the
+     * given key value of the presets array.
+     *
+     * @return HTML response
+     */
+    public function redirectToPreset()
+    {
+        $key = $this->request->getStringParam('preset_key', 0);
+        $presets = $this->helper->addShortcutsHelper->getShortcutPresetsAsArray();
+        if (isset($presets[$key])) {
+            $url = $presets[$key]['url'];
+        } else {
+            $url = '/';
+        }
+        return $this->response->redirect($url);
+    }
 }

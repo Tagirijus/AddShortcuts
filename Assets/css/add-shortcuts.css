@@ -9,3 +9,23 @@
 	font-style: italic;
 	color: rgb(200, 40, 60, .5);
 }
+
+.addshortcuts-preset-selector {
+	width: 400px;
+	margin-right: 1em;
+}
+.addshortcuts-preset-selector > .select-dropdown-input-container {
+	max-width: 400px;
+}
+.addshortcuts-preset-selector > .select-dropdown-input-container > .select-dropdown-input {
+	width: 100%;
+}
+
+@media screen and (min-width: 1400px) {
+	.addshortcuts-preset-selector {
+		width: 600px;
+	}
+	.addshortcuts-preset-selector > .select-dropdown-input-container {
+		max-width: 600px;
+	}
+}

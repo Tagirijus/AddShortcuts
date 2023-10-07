@@ -93,6 +93,22 @@ function tagiShortcuts(original) {
     		}
     	});
 
+    	KB.onKey('F', function () {
+	        if (! KB.modal.isOpen()) {
+	            KB.modal.open('/addshortcuts/shortcutPresetSelectModal', 'small', false);
+
+	            var killTimeout = () => {
+	            	clearInterval(myTimeout);
+	            }
+	            var myTimeout = setInterval(() => {
+	            	if (KB.modal.isOpen()) {
+	            		KB.trigger('shortcutpreset.selector.open');
+	            		killTimeout();
+	            	}
+	            }, 1);
+	        }
+    	});
+
 	};
 }
 

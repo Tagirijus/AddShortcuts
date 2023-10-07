@@ -137,4 +137,17 @@ class AddShortcutsHelper extends Base
 
         return $presets;
     }
+
+    /**
+     * Render Javascript component
+     * for drop down.
+     *
+     * @param  string $name
+     * @param  array  $params
+     * @return string
+     */
+    public function componentShortcutPresetSelector($name, array $params = array())
+    {
+        return '<div class="addshortcuts-preset-selector js-'.$name.'" data-params=\''.json_encode($params, JSON_HEX_APOS).'\'"></div>';
+    }
 }
