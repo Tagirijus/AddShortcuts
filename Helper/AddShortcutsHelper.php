@@ -125,7 +125,7 @@ class AddShortcutsHelper extends Base
                 'key' => $key,
                 'url' => $url
             ];
-        } elseif ($edit) {
+        } elseif ($edit !== false) {
             $presets[$edit] = [
                 'label' => $label,
                 'key' => $key,

@@ -122,6 +122,7 @@ class AddShortcutsController extends \Kanboard\Controller\PluginController
             if ($preset['url'] == $url) {
                 $edit = true;
                 $label = $preset['label'];
+                $key = $preset['key'];
             }
         }
         $this->response->html($this->helper->layout->config('AddShortcuts:addshortcuts/add_shortcut_modal', [

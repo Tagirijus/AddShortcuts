@@ -30,7 +30,9 @@
             <?= $this->form->label(t('Label'), 'label') ?>
             <?= $this->form->text('label', ['label' => $label], [], ['autofocus']) ?>
             <?= $this->form->label('Key', 'key') ?>
-            <?= $this->form->text('key', ['key' => $key]) ?>
+            <?= $this->form->text('key', ['key' => $key], [], [
+                'placeholder="e.g. \'v+v+3\'"'
+            ]) ?>
             <?= $this->form->label('URL', 'url') ?>
             <?= $this->form->text('url', ['url' => $url]) ?>
             <span class="addshortcuts-small-font">
