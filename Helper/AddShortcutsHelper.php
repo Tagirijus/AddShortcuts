@@ -131,7 +131,7 @@ class AddShortcutsHelper extends Base
                 'key' => $key,
                 'url' => $url
             ];
-        } elseif ($delete) {
+        } elseif ($delete !== false) {
             unset($presets[$delete]);
         }
 
