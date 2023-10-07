@@ -13,76 +13,128 @@ use Kanboard\Filter\TaskProjectsFilter;
 class AddShortcutsHelper extends Base
 {
     /**
-     * Generae the help list for the help modal
-     * for the shortcuts.
-     *
-     * For the specific v [+v] + [0-9] shortcuts and
-     * their set up captions.
+     * Generae the help list depending on the set up
+     * shortcut presets, which have set up a key
+     * shortcut.
      *
      * @return string
      */
-    public function getHelpListV09()
+    public function getHelpList()
     {
-        $caps = [
-            $this->configModel->get('addshortcuts_v_1_caption', '---'),
-            $this->configModel->get('addshortcuts_v_2_caption', '---'),
-            $this->configModel->get('addshortcuts_v_3_caption', '---'),
-            $this->configModel->get('addshortcuts_v_4_caption', '---'),
-            $this->configModel->get('addshortcuts_v_5_caption', '---'),
-            $this->configModel->get('addshortcuts_v_6_caption', '---'),
-            $this->configModel->get('addshortcuts_v_7_caption', '---'),
-            $this->configModel->get('addshortcuts_v_8_caption', '---'),
-            $this->configModel->get('addshortcuts_v_9_caption', '---'),
-            $this->configModel->get('addshortcuts_v_0_caption', '---')
-        ];
+        $presets = $this->getShortcutPresetsAsArray();
 
-        $list = '';
-        $no_caption = true;
+        $out = '';
 
-        foreach ($caps as $num => $cap) {
-            if ($cap !== '---') {
-                $no_caption = false;
-                $list .= '<li><strong>v ' . (string) ($num+1) . '</strong>: ' . $cap . '</li>';
+        foreach ($presets as $preset) {
+            if ($preset['key'] != '') {
+                $out .= '<li>' . $preset['label'] . ' = <strong>' . $preset['key_help'] . '</strong></li>';
             }
         }
 
-        return $no_caption ? '' : $list;
+        return $out;
     }
 
     /**
-     * Generae the help list for the help modal
-     * for the shortcuts.
+     * Get the shortcuts presets as a processed array.
+     * It is an array containing arrays. Each item
+     * will have such a format:
+     * [
+     *     'label' => string,
+     *     'key' => string,        // the string which will be used in the JS
+     *     'key_help' => string,   // the string which will be used in the help modal
+     *     'url' => string
+     * ]
      *
-     * For the specific v + v + [0-9] shortcuts and
-     * their set up captions.
-     *
-     * @return string
+     * @return array
      */
-    public function getHelpListVV09()
+    public function getShortcutPresetsAsArray()
     {
-        $caps = [
-            $this->configModel->get('addshortcuts_v_11_caption', '---'),
-            $this->configModel->get('addshortcuts_v_12_caption', '---'),
-            $this->configModel->get('addshortcuts_v_13_caption', '---'),
-            $this->configModel->get('addshortcuts_v_14_caption', '---'),
-            $this->configModel->get('addshortcuts_v_15_caption', '---'),
-            $this->configModel->get('addshortcuts_v_16_caption', '---'),
-            $this->configModel->get('addshortcuts_v_17_caption', '---'),
-            $this->configModel->get('addshortcuts_v_18_caption', '---'),
-            $this->configModel->get('addshortcuts_v_19_caption', '---'),
-            $this->configModel->get('addshortcuts_v_20_caption', '---')
-        ];
+        $out = [];
+        $presets_raw = $this->configModel->get('addshortcuts_presets', '');
+        $presets_per_line = preg_split("/\r\n|\n|\r/", $presets_raw);
+        foreach ($presets_per_line as $preset_line) {
+            $preset_tmp = explode(':', $preset_line);
+            if (count($preset_tmp) > 2) {
+                $out[] = [
+                    'label' => $preset_tmp[0],
+                    'key' => $preset_tmp[1],
+                    'key_help' => str_replace('+', ' ', $preset_tmp[1]),
+                    'url' => $preset_tmp[2],
+                ];
+            }
+        }
+        return $out;
+    }
 
-        $list = '';
-        $no_caption = true;
+    /**
+     * Generate a string to set into the config, which will
+     * be the shortcuts presets generated from the given
+     * array.
+     *
+     * @param string
+     */
+    public function getShortcutPresetsStringFromArray($arr)
+    {
+        $out = [];
+        foreach ($arr as $preset) {
+            $out[] = $preset['label'] . ':' . $preset['key'] . ':' . $preset['url'];
+        }
+        return implode("\n", $out);
+    }
 
-        foreach ($caps as $num => $cap) {
-            if ($cap !== '---') {
-                $no_caption = false;
-                $list .= '<li><strong>v v ' . (string) ($num+1) . '</strong>: ' . $cap . '</li>';
+    /**
+     * Get the form and generate a new preset array from it.
+     * The options are:
+     *
+     * 1) The entered URL does not exist: new preset gets appended
+     * 2) The entered URL is empty: if $form['url_original'] exists
+     *    in the presets, this one gets deleted
+     * 3) The entered URL is not empty and exists already: the
+     *    original presets label and key will be updated.
+     *
+     * @param  array $form
+     * @return array
+     */
+    public function processFormToNewPresetArray($form)
+    {
+        $label = $form['label'];
+        $key = $form['key'];
+        $url = $form['url'];
+        $url_original = $form['url_original'];
+
+        $presets = $this->getShortcutPresetsAsArray();
+
+        $add = true;
+        $edit = false;
+        $delete = false;
+
+        foreach ($presets as $k => $preset) {
+            if ($preset['url'] == $url || $preset['url'] == $url_original) {
+                $add = false;
+                if ($url == '') {
+                    $delete = $k;
+                } else {
+                    $edit = $k;
+                }
             }
         }
 
-        return $no_caption ? '' : $list;
+        if ($add) {
+            $presets[] = [
+                'label' => $label,
+                'key' => $key,
+                'url' => $url
+            ];
+        } elseif ($edit) {
+            $presets[$edit] = [
+                'label' => $label,
+                'key' => $key,
+                'url' => $url
+            ];
+        } elseif ($delete) {
+            unset($presets[$delete]);
+        }
+
+        return $presets;
     }
 }

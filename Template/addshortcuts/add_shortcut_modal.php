@@ -1,11 +1,19 @@
 <div class="modal-header">
-    <h2><?= t('AddShortcuts configuration') ?>: Custom #<?= $v ?></h2>
+    <?php if ($edit): ?>
+        <h2><?= t('AddShortcuts - Edit preset') ?></h2>
+    <?php else: ?>
+        <h2><?= t('AddShortcuts - Add preset') ?></h2>
+    <?php endif ?>
 </div>
 <form method="post" action="<?= $this->url->href('AddShortcutsController', 'saveAddShortcutModal', ['plugin' => 'AddShortcuts']) ?>" autocomplete="off">
     <?= $this->form->csrf() ?>
 
     <p>
-        <?= t('Entered data will overwrite chosen shortcut number!') ?>
+        <?php if ($edit): ?>
+            <?= t('Entered data will overwrite preset with same url!') ?>
+        <?php else: ?>
+            <?= t('Entered data will be added as a new preset') ?>
+        <?php endif ?>
     </p>
     <div class="task-form-container">
 
@@ -13,20 +21,21 @@
 
         <input
             type="hidden"
-            id="v_num"
-            name="v_num"
-            value="<?= $v ?>"
+            name="url_original"
+            value="<?= $url ?>"
         >
 
+
         <div class="task-form-main-column">
-            <?= $this->form->label(t('Caption'), 'v_caption') ?>
-            <?= $this->form->text('v_caption', ['v_caption' => $v_caption], [], [
-                'autofocus'
-            ]) ?>
-            <?= $this->form->label('v + ' . $v, 'v_url') ?>
-            <?= $this->form->text('v_url', ['v_url' => $uri], [], [
-                'autofocus'
-            ]) ?>
+            <?= $this->form->label(t('Label'), 'label') ?>
+            <?= $this->form->text('label', ['label' => $label], [], ['autofocus']) ?>
+            <?= $this->form->label('Key', 'key') ?>
+            <?= $this->form->text('key', ['key' => $key]) ?>
+            <?= $this->form->label('URL', 'url') ?>
+            <?= $this->form->text('url', ['url' => $url]) ?>
+            <span class="addshortcuts-small-font">
+                <?= t('Keep URL empty to delete the preset') ?>
+            </span>
         </div>
 
     </div>

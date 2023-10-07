@@ -6,6 +6,7 @@
 ### What's Changed
 
 _(most recent changes are listed on top):_
+- Refactorized that shortcut presets are now stored in a textfield, giving the user the option to add endless shortcut presets
 - New feature: drop down box. Accessed by `F`
 
 
