@@ -8,6 +8,7 @@
         <li><?= t('Switch to the board view') ?> = <strong>v b</strong></li>
         <li><?= t('Switch to the list view') ?> = <strong>v l</strong></li>
         <li><?= t('Switch to the tasks view') ?> = <strong>v t</strong></li>
+        <li><?= t('Open AddShortCuts drop down') ?> = <strong>F</strong></li>
         <li><?= t('Open Big Board') ?> = <strong>v a</strong><br><i>(need <a href="https://github.com/BlueTeck/kanboard_plugin_bigboard" target="_blank">BigBoard</a> for this to work)</i></li>
         <li><?= t('Show tasks, which were completed in the last week (Mo-Su)') ?> = <strong>v c</strong></li>
         <li><?= t('Show tasks, which were completed in the actual week (Mo-Su)') ?> = <strong>v v c</strong></li>

@@ -1,6 +1,14 @@
 # Changelog
 
 
+## v2.0
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- New feature: drop down box. Accessed by `F`
+
+
 ## v1.14
 
 ### What's Changed

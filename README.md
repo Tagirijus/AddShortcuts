@@ -2,7 +2,7 @@
 
 #### _Plugin for [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software")_
 
-A plugin, which adds certain shortcuts to _Kanboard_.
+A plugin, which adds certain shortcuts to _Kanboard_. Also since version 2 there is a new drop down box feature, with which you can choose predefined user presets to quickly switch to a predefined url.
 
 
 Screenshots
@@ -17,6 +17,7 @@ Features
 -------------
 
 - `?` opens updated short cut list
+- `F` opens the drop down _(new since v2.0.0)_
 - `Home` navigates to the home screen / dashboard
 - `v+a` opens the [Big Board](https://github.com/TimoStahl/kanboard_plugin_bigboard)
 - `v+t` opens the _"My tasks"_ for the actual user
