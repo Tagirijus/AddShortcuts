@@ -27,7 +27,8 @@ function tagiShortcuts(original) {
 		});
 
 		KB.onKey('v+a', function () {
-			window.location = '/bigboard?search=status%3Aopen';
+			console.log('/bigboard' + getCurrentFilterFromURI());
+			window.location = '/bigboard' + getCurrentFilterFromURI();
 		});
 
 		KB.onKey('v+t', function () {
@@ -126,4 +127,16 @@ function addAddShortcutPresetModal() {
 	var uri = window.location.pathname + encodeURIComponent(window.location.search);
 	var out = '/addshortcuts/addCustomShortcutModal?uri=' + uri;
 	return out;
+}
+
+function getCurrentFilterFromURI() {
+	var searchPos = window.location.href.indexOf("search");
+	if (searchPos > -1) {
+		return '?search=' + window.location.href.substr(
+			searchPos + 7
+		);
+	} else {
+		// fallback
+		return '?search=status%3Aopen';
+	}
 }

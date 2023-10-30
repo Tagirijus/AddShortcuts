@@ -1,6 +1,14 @@
 # Changelog
 
 
+## v2.1
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- `v+a` now uses the actual set filter on the big board
+
+
 ## v2.0
 
 ### What's Changed
