@@ -18,6 +18,14 @@ function tagiShortcuts(original) {
 			window.location = '/';
 		});
 
+		KB.onKey('v+c', function () {
+			window.location = '/addshortcuts/completedLastWeek';
+		});
+
+		KB.onKey('v+v+c', function () {
+			window.location = '/addshortcuts/completedThisWeek';
+		});
+
 		KB.onKey('v+a', function () {
 			window.location = '/bigboard?search=status%3Aopen';
 		});
