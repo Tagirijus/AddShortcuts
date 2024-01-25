@@ -59,6 +59,11 @@ function tagiShortcuts(original) {
 		            KB.modal.open(KB.find('#addSpentTimeMenu').data('addurl'), 'small', false);
 		        }
 		    });
+		    KB.onKey('T', function () {
+		        if (! KB.modal.isOpen()) {
+		            KB.modal.open(KB.find('#changeEstimatedTimeMenu').data('addurl'), 'small', false);
+		        }
+		    });
 		    KB.onKey('S', function () {
 		        if (! KB.modal.isOpen()) {
 		            KB.modal.open(KB.find('#subtaskHelperConvert').data('addurl'), 'small', false);
