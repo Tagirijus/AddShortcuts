@@ -1,6 +1,16 @@
 # Changelog
 
 
+## v2.3
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- `D` added for "remove all subtasks".
+- `d` added for "duplicate instant" (DuplicateMod needed).
+- `C` added for "edit last comment".
+
+
 ## v2.2
 
 ### What's Changed
