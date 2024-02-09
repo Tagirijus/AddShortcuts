@@ -26,12 +26,16 @@
         <li><?= t('Edit task') ?> = <strong>e</strong></li>
         <li><?= t('New subtask') ?> = <strong>s</strong></li>
         <li><?= t('New comment') ?> = <strong>c</strong></li>
+        <li><?= t('Edit last comment') ?> = <strong>C</strong></li>
+        <li><?= t('Scroll to comments') ?> = <strong>y</strong></li>
         <li><?= t('New internal link') ?> = <strong>l</strong></li>
         <li><?= t('Add spent time') ?> = <strong>t</strong><br><i>(need <a href="https://github.com/Tagirijus/AddSpentTime" target="_blank">AddSpentTime</a> for this to work)</i></li>
         <li><?= t('Change estimated time') ?> = <strong>T</strong><br><i>(need <a href="https://github.com/Tagirijus/AddSpentTime" target="_blank">AddSpentTime</a> for this to work)</i></li>
         <li><?= t('Convert task times to new subtask') ?> = <strong>S</strong><br><i>(need <a href="https://github.com/Tagirijus/SubtaskHelper" target="_blank">SubtaskHelper</a> for this to work)</i></li>
         <li><?= t('Combine done subtasks to new subtask') ?> = <strong>g</strong><br><i>(need <a href="https://github.com/Tagirijus/SubtaskHelper" target="_blank">SubtaskHelper</a> for this to work)</i></li>
         <li><?= t('Edit subtask') ?> = <strong>E</strong><br><i>(need <a href="https://github.com/Tagirijus/SubtaskHelper" target="_blank">SubtaskHelper</a> for this to work)</i></li>
+        <li><?= t('Remove all subtasks') ?> = <strong>D</strong><br><i>(need <a href="https://github.com/Tagirijus/SubtaskHelper" target="_blank">SubtaskHelper</a> for this to work)</i></li>
+        <li><?= t('Duplicate (instant)') ?> = <strong>d</strong><br><i>(need <a href="https://github.com/Tagirijus/DuplicateMod" target="_blank">DuplicateMod</a> for this to work)</i></li>
     </ul>
     <h3><?= t('Application') ?></h3>
     <ul>

@@ -26,4 +26,6 @@ return array(
     'Shortcut presets added/edited/deleted successfully.' => 'Shortcut Presets erfolgreich hinzugefügt/bearbeitet/gelöscht.',
     'Unable to save/edit/delete your shortcut preset.' => 'Kann Shortcut Preset nicht hinzufügen/bearbeiten/löschen.',
     'Choose shortcut preset' => 'Shortcut Preset wählen',
+    'Edit last comment' => 'Letzten Kommentar bearbeiten',
+    'Scroll to comments' => 'Zu Kommentaren scrollen',
 );
