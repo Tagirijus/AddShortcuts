@@ -94,6 +94,13 @@ function tagiShortcuts(original) {
 		            KB.modal.open(getLastCommentEditURL(), 'medium', false);
 		        }
 		    });
+		    KB.onKey('y', function () {
+		        if (! KB.modal.isOpen()) {
+				    const commentSection = document.getElementById('comments');
+				    commentSection.scrollIntoView({ behavior: 'smooth' });
+		        }
+		    });
+
 		}
 
 		KB.onKey('B', function () {
