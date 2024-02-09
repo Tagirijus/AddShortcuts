@@ -79,6 +79,21 @@ function tagiShortcuts(original) {
 		            KB.modal.open(KB.find('#subtaskHelperEditSubtask').data('addurl'), 'small', false);
 		        }
 		    });
+		    KB.onKey('D', function () {
+		        if (! KB.modal.isOpen()) {
+		            KB.modal.open(KB.find('#subtaskHelperRemoveAll').data('addurl'), 'small', false);
+		        }
+		    });
+		    KB.onKey('d', function () {
+		        if (! KB.modal.isOpen()) {
+		            KB.modal.open(KB.find('#duplicateModDuplicateInstant').data('addurl'), 'small', false);
+		        }
+		    });
+		    KB.onKey('C', function () {
+		        if (! KB.modal.isOpen()) {
+		            KB.modal.open(getLastCommentEditURL(), 'medium', false);
+		        }
+		    });
 		}
 
 		KB.onKey('B', function () {
@@ -144,4 +159,35 @@ function getCurrentFilterFromURI() {
 		// fallback
 		return '?search=status%3Aopen';
 	}
+}
+
+function getTaskID() {
+	const uri = window.location.href;
+    const regex1 = /task_id=(\d+)/;
+    var match = uri.match(regex1);
+    if (match) {
+        return parseInt(match[1]);
+    }
+    const regex2 = /\/task\/(\d+)/;
+    var match = uri.match(regex2);
+    if (match) {
+        return parseInt(match[1]);
+    }
+    return null;
+}
+
+function findNewestCommentID() {
+	let highestNumber = -1;
+	const divs = document.querySelectorAll('div[id^="comment-"]');
+	divs.forEach(div => {
+	    const idNumber = parseInt(div.id.replace('comment-', ''));
+	    if (idNumber > highestNumber) {
+	        highestNumber = idNumber;
+	    }
+	});
+	return highestNumber;
+}
+
+function getLastCommentEditURL() {
+	return '/task/' + getTaskID() + '/comment/' + findNewestCommentID() + '/edit';
 }
