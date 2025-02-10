@@ -26,6 +26,12 @@ class Plugin extends Base
         // Views - Template Hook
         $this->template->hook->attach(
             'template:config:sidebar', 'AddShortcuts:config/addshortcuts_config_sidebar');
+        if (
+            $this->configModel->get('addshortcuts_dashboard_sidebar', 0)
+        ) {
+            $this->template->hook->attach(
+                'template:dashboard:sidebar', 'AddShortcuts:dashboard/addshortcuts_on_dashboard_sidebar');
+        }
 
         // Extra Page - Routes
         $this->route->addRoute('/addshortcuts/config', 'AddShortcutsController', 'show', 'AddShortcuts');

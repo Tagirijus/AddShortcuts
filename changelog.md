@@ -6,6 +6,14 @@
 ### What's Changed
 
 _(most recent changes are listed on top):_
+- Added config option to show shortcuts modal opener link on dashboard in sidebar.
+
+
+## v2.3
+
+### What's Changed
+
+_(most recent changes are listed on top):_
 - `D` added for "remove all subtasks".
 - `d` added for "duplicate instant" (DuplicateMod needed).
 - `C` added for "edit last comment".

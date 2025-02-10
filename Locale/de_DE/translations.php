@@ -28,4 +28,5 @@ return array(
     'Choose shortcut preset' => 'Shortcut Preset wählen',
     'Edit last comment' => 'Letzten Kommentar bearbeiten',
     'Scroll to comments' => 'Zu Kommentaren scrollen',
+    'in dashboard sidebar' => 'in Sidebar auf dem Dashboard',
 );

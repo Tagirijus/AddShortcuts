@@ -18,6 +18,11 @@
             <?= $this->form->textarea('presets', ['presets' => $presets], [], [], 'addshortcuts-presets-config') ?>
         </div>
 
+        <div class="task-form-main-column">
+            <?= $this->form->label('AddShortcuts ' . t('in dashboard sidebar'), 'dashboard_sidebar') ?>
+            <?= $this->form->checkbox('dashboard_sidebar', t('enabled'), 1, $dashboard_sidebar, '', []) ?>
+        </div>
+
     </div>
 
 

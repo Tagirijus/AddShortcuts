@@ -16,7 +16,8 @@ class AddShortcutsController extends \Kanboard\Controller\PluginController
     {
         $this->response->html($this->helper->layout->config('AddShortcuts:config/addshortcuts_config', [
             'title' => t('AddShortcuts') . ' &gt; ' . t('Settings'),
-            'presets' => $this->configModel->get('addshortcuts_presets', '')
+            'presets' => $this->configModel->get('addshortcuts_presets', ''),
+            'dashboard_sidebar' => $this->configModel->get('addshortcuts_dashboard_sidebar', '')
         ]));
     }
 
@@ -28,7 +29,8 @@ class AddShortcutsController extends \Kanboard\Controller\PluginController
         $form = $this->request->getValues();
 
         $values = [
-            'addshortcuts_presets' => $form['presets']
+            'addshortcuts_presets' => $form['presets'],
+            'addshortcuts_dashboard_sidebar' => $form['dashboard_sidebar']
         ];
 
         $this->languageModel->loadCurrentLanguage();
