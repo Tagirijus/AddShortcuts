@@ -100,6 +100,11 @@ function tagiShortcuts(original) {
 				    commentSection.scrollIntoView({ behavior: 'smooth' });
 		        }
 		    });
+		    KB.onKey('x', function () {
+		        if (! KB.modal.isOpen()) {
+		            KB.modal.open(KB.find('#changeComplexityMenu').data('addurl'), 'small', false);
+		        }
+		    });
 
 		}
 

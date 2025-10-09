@@ -1,6 +1,14 @@
 # Changelog
 
 
+## v2.5
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- Added shortcut for "change complexity" from the AddSpentTime plugin.
+
+
 ## v2.4
 
 ### What's Changed

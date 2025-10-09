@@ -25,7 +25,9 @@ Features
 - `v+a` opens the [Big Board](https://github.com/TimoStahl/kanboard_plugin_bigboard) with the current filter
 - `v+t` opens the _"My tasks"_ for the actual user
 - `a+a` opens the projects analytics in a modal
-- `t` adds the _add spent time_ modal from [TagiAddSpentTime](https://github.com/Tagirijus/AddSpentTime)
+- `t` opens the _add spent time_ modal from [TagiAddSpentTime](https://github.com/Tagirijus/AddSpentTime)
+- `T` opens the _change estimated time_ modal from [TagiAddSpentTime](https://github.com/Tagirijus/AddSpentTime)
+- `x` opens the _change complexity_ modal from [TagiAddSpentTime](https://github.com/Tagirijus/AddSpentTime)
 - `v+N` where _N_ is any number between 0 and 9. You can set up custom links in the config. This way you could e.g. assign `/?controller=SearchController&action=index&search=status%3Aopen` so that the respecting shortcut will lead to the filter searching all open tasks.
 - `v+v+N` is the same as above, yet with 10 additional slots to configure!
 - `S` executes the converter feature of the [SubtaskHelper](https://github.com/Tagirijus/SubtaskHelper)
