@@ -36,6 +36,7 @@
         <li><?= t('Combine done subtasks to new subtask') ?> = <strong>g</strong><br><i>(need <a href="https://github.com/Tagirijus/SubtaskHelper" target="_blank">SubtaskHelper</a> for this to work)</i></li>
         <li><?= t('Edit subtask') ?> = <strong>E</strong><br><i>(need <a href="https://github.com/Tagirijus/SubtaskHelper" target="_blank">SubtaskHelper</a> for this to work)</i></li>
         <li><?= t('Remove all subtasks') ?> = <strong>D</strong><br><i>(need <a href="https://github.com/Tagirijus/SubtaskHelper" target="_blank">SubtaskHelper</a> for this to work)</i></li>
+        <li><?= t('Remove last subtask') ?> = <strong>X</strong><br><i>(need <a href="https://github.com/Tagirijus/SubtaskHelper" target="_blank">SubtaskHelper</a> for this to work)</i></li>
         <li><?= t('Duplicate (instant)') ?> = <strong>d</strong><br><i>(need <a href="https://github.com/Tagirijus/DuplicateMod" target="_blank">DuplicateMod</a> for this to work)</i></li>
     </ul>
     <h3><?= t('Application') ?></h3>

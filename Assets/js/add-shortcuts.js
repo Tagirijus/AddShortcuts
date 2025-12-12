@@ -105,6 +105,11 @@ function tagiShortcuts(original) {
 		            KB.modal.open(KB.find('#changeComplexityMenu').data('addurl'), 'small', false);
 		        }
 		    });
+		    KB.onKey('X', function () {
+		        if (! KB.modal.isOpen()) {
+		            KB.modal.open(KB.find('#subtaskHelperRemoveLast').data('addurl'), 'small', false);
+		        }
+		    });
 
 		}
 
