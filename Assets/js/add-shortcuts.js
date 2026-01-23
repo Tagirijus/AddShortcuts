@@ -84,11 +84,6 @@ function tagiShortcuts(original) {
 		            KB.modal.open(KB.find('#subtaskHelperRemoveAll').data('addurl'), 'small', false);
 		        }
 		    });
-		    KB.onKey('d', function () {
-		        if (! KB.modal.isOpen()) {
-		            KB.modal.open(KB.find('#duplicateModDuplicateInstant').data('addurl'), 'small', false);
-		        }
-		    });
 		    KB.onKey('C', function () {
 		        if (! KB.modal.isOpen()) {
 		            KB.modal.open(getLastCommentEditURL(), 'medium', false);
