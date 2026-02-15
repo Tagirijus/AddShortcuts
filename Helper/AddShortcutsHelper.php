@@ -3,15 +3,22 @@
 namespace Kanboard\Plugin\AddShortcuts\Helper;
 
 use Kanboard\Core\Base;
-use Kanboard\Model\TaskModel;
-use Kanboard\Model\ProjectModel;
-use Kanboard\Model\SubtaskModel;
-use Kanboard\Core\Paginator;
-use Kanboard\Filter\TaskProjectsFilter;
 
 
 class AddShortcutsHelper extends Base
 {
+    /**
+     * Render Javascript component
+     *
+     * @param  string $name
+     * @param  array  $params
+     * @return string
+     */
+    public function componentShortcutSelector($name, array $params = array())
+    {
+        return '<div class="task-selector js-'.$name.'" data-params=\''.json_encode($params, JSON_HEX_APOS).'\'"></div>';
+    }
+
     /**
      * Generae the help list depending on the set up
      * shortcut presets, which have set up a key

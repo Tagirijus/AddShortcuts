@@ -1,4 +1,4 @@
-<?= $this->taskSelectorHelper->componentTaskSelector('select-dropdown-autocomplete', array(
+<?= $this->addShortcutsHelper->componentShortcutSelector('select-dropdown-autocomplete', array(
     'name' => 'taskId',
     'placeholder' => t('Choose shortcut preset'),
     'ariaLabel' => t('Choose shortcut preset'),
