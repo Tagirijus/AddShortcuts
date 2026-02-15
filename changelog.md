@@ -1,6 +1,14 @@
 # Changelog
 
 
+## v2.7
+
+### What's Changed
+
+_(most recent changes are listed on top):_
+- Fixed that _TaskSelector_ was needed, due to a usage of its helper. Introduced this part of the helper for this plugin here.
+
+
 ## v2.6
 
 ### What's Changed
